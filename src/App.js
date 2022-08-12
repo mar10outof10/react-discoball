@@ -1,8 +1,9 @@
 import './App.css';
+import Overlay from './components/Overlay';
 
-function App() {
+const App = () => {
   return (
-
+    <Overlay />
   );
 }
 
