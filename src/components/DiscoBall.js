@@ -1,4 +1,5 @@
 import './DiscoBall.scss';
+import DiscoLights from "./DiscoLights";
 
 const DiscoBallRope = () => {
   return (<div className="discoBall-rope"></div>)
@@ -7,11 +8,6 @@ const DiscoBallRope = () => {
 const DiscoBallSphere = () => {
   return (<div className="discoBall-sphere"></div>)
 }
-
-const DiscoLights = () => {
-  
-}
-
 
 const DiscoBall = () => {
   return (
