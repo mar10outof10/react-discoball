@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+  box-sizing: border-box;
 
   &-rope {
     height: 10vh;
