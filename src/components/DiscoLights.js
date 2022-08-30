@@ -6,7 +6,7 @@ const DiscoCircle = ({layer}) => {
 
   return [...Array(layer).keys()].map(() => [...Array(numCircles).keys()].map((_, index) => {
     let rotationDeg = 360 * ((index + 1) / numCircles - 1);
-    let height = (index + 30) * 20;
+    let height = (index + 30) * 40;
 
     let styles = {
       height: `${height}px`,
