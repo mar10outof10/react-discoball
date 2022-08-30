@@ -2,26 +2,41 @@ import './DiscoLights.scss';
 import {ReactComponent as WhiteEllipse} from "../assets/white-ellipse.svg";
 
 const DiscoCircle = ({layer}) => {
-  const height = `${layer * 20}px`;
   const numCircles = layer * 8;
 
-  let styles = `height: ${height}px; position: absolute;`
+  return [...Array(layer).keys()].map(() => [...Array(numCircles).keys()].map((_, index) => {
+    let rotationDeg = 360 * ((index + 1) / numCircles - 1);
+    let height = (index + 30) * 20;
 
-  return [...Array(numCircles).keys()].map((_, index) => {
-    styles = {
+    let styles = {
       height: `${height}px`,
+      top: `-${height / 2}px`,
       position: 'absolute',
-      transform: `rotate(${360 * ((index + 1) / numCircles - 1)}deg)`,
+      transform: `rotate(${rotationDeg}deg)`,
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-between',
     }
+    
     return (
       <div style={styles}>
-        <WhiteEllipse />
-        <WhiteEllipse />
-        <WhiteEllipse />
-        <WhiteEllipse />
+        <WhiteEllipse style={{height: '10px', width: '10px'}}/>
+        <WhiteEllipse style={{height: '10px', width: '10px'}}/>
+        <WhiteEllipse style={{height: '10px', width: '10px'}}/>
+        <WhiteEllipse style={{height: '10px', width: '10px'}}/>
+        <WhiteEllipse style={{height: '10px', width: '10px'}}/>
+        <WhiteEllipse style={{height: '10px', width: '10px'}}/>
+        <div style={{height: '10px', width: '10px'}}/>
+        <div style={{height: '10px', width: '10px'}}/>
+        <WhiteEllipse style={{height: '10px', width: '10px'}}/>
+        <WhiteEllipse style={{height: '10px', width: '10px'}}/>
+        <WhiteEllipse style={{height: '10px', width: '10px'}}/>
+        <WhiteEllipse style={{height: '10px', width: '10px'}}/>
+        <WhiteEllipse style={{height: '10px', width: '10px'}}/>
+        <WhiteEllipse style={{height: '10px', width: '10px'}}/>
       </div>
     )
-  })
+  }))
 }
 
 const DiscoLights = () => {
