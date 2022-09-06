@@ -1,5 +1,5 @@
 import './DiscoLights.scss';
-import {ReactComponent as WhiteEllipse} from "../assets/white-ellipse.svg";
+import {ReactComponent as WhiteEllipse} from "../assets/whiteEllipse.svg";
 
 const DiscoCircle = ({layer}) => {
   const numCircles = layer * 8;
